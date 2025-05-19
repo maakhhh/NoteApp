@@ -1,0 +1,5 @@
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\publish\appsettings.Development.json
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\publish\appsettings.json
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\publish\NoteApp.pdb
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\publish\Core.pdb
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\publish\NoteApp

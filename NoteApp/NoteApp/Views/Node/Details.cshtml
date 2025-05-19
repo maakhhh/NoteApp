@@ -1,0 +1,94 @@
+@model NoteApp.Dto.NodeDetailDto
+
+@{
+    ViewData["Title"] = "Детали заметки";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="mb-0">@Model.Title</h2>
+                <div>
+                    <small class="text-white-50">Создано: @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</small>
+                    @if (Model.UpdatedAt != Model.CreatedAt)
+                    {
+                        <br />
+                        <small class="text-white-50">Изменено: @Model.UpdatedAt.ToString("dd.MM.yyyy HH:mm")</small>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <div class="mb-4 p-3 bg-light rounded">
+                <h5>Содержание:</h5>
+                <p class="mb-0" style="white-space: pre-wrap">@Model.Content</p>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                        <i class="bi bi-pencil"></i> Редактировать
+                    </a>
+                    <a asp-action="Index" class="btn btn-secondary ml-2">
+                        <i class="bi bi-arrow-left"></i> Назад к списку
+                    </a>
+                </div>
+                
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                    <i class="bi bi-trash"></i> Удалить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно подтверждения удаления -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">Подтверждение удаления</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Вы уверены, что хотите удалить заметку "@Model.Title"?
+                <br><br>
+                <strong>Это действие нельзя отменить!</strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Удалить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 0.5rem;
+        }
+        .card-header {
+            border-radius: 0.5rem 0.5rem 0 0 !important;
+        }
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        // Инициализация модального окна Bootstrap
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'), {
+            keyboard: false
+        });
+    </script>
+}
