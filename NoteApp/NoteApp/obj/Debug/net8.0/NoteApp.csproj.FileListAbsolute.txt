@@ -49,6 +49,4 @@ D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\Microsoft.EntityFra
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\Npgsql.dll
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\publish\appsettings.Development.json
-D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Debug\net8.0\publish\appsettings.json
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Debug\net8.0\NoteApp.sourcelink.json

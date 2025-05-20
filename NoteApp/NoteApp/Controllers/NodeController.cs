@@ -12,6 +12,12 @@ public class NodeController(ILogger<NodeController> logger, INodeService nodeSer
 {
     private readonly ILogger<NodeController> logger = logger;
     
+    [HttpGet("/health")]
+    public IActionResult HealthCheck()
+    {
+        return Ok("Healthy");
+    }
+    
     public async Task<IActionResult> Index()
     {
         var nodes = mapper.Map<List<NodeInListDto>>(await nodeService.GetAll());
