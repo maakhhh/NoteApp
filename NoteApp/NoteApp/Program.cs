@@ -3,7 +3,6 @@ using Core.Domain;
 using NoteApp.Dto;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Configuration.AddEnvironmentVariables();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddCore();
@@ -25,7 +24,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 

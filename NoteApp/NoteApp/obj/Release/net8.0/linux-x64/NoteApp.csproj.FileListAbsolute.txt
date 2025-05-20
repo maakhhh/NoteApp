@@ -360,3 +360,6 @@ D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Release\net8.0\linux-x64\refint\
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Release\net8.0\linux-x64\NoteApp.pdb
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Release\net8.0\linux-x64\NoteApp.genruntimeconfig.cache
 D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Release\net8.0\linux-x64\ref\NoteApp.dll
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Release\net8.0\linux-x64\publish\appsettings.Development.json
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\bin\Release\net8.0\linux-x64\publish\appsettings.json
+D:\Projects\NoteApp\NoteApp\NoteApp\NoteApp\obj\Release\net8.0\linux-x64\NoteApp.sourcelink.json

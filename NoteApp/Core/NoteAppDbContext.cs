@@ -25,8 +25,7 @@ public class NoteAppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql(
-            config["ConnectionStrings:DefaultConnection"]);
+        optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable("DATABASE_CONNECTION") ?? throw new Exception("Connection string is not defined"));
     }
     
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

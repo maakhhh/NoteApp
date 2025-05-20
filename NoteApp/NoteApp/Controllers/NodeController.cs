@@ -11,12 +11,6 @@ namespace NoteApp.Controllers;
 public class NodeController(ILogger<NodeController> logger, INodeService nodeService, IMapper mapper) : Controller
 {
     private readonly ILogger<NodeController> logger = logger;
-
-    [HttpGet("/health")]
-    public IActionResult HealthCheck()
-    {
-        return Ok("Healthy");
-    }
     
     public async Task<IActionResult> Index()
     {
